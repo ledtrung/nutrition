@@ -28,12 +28,10 @@ jobs:
       with:
         username: 'letrung'
         password: 'a6bddf28-1554-4d43-851f-572c2935a7f7'
-    - name: Build and push
-      uses: docker/build-push-action@v2
-      with:
-        context: .
-        push: true
-        tags: letrung/sleepyshark.nutrition.factapi:latest
+    - name: Build the Docker image
+      run: docker build . --file src/services/facts/SleepyShark.Nutrition.FactApi/Dockerfile --tag letrung/sleepyshark.nutrition.factapi:$(date +%s)
+    - name: Push the Docker image to registry
+      run: docker push letrung/sleepyshark.nutrition.factapi:$(date +%s)
     - uses: actions/upload-artifact@v2
       with:
         name: factapi-artifact
