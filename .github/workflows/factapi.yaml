@@ -3,7 +3,7 @@ on:
   push:
     branches: [ user/trung/sample-build-action ]
     paths: 
-      - 'src/services/facts'
+      - 'src/services/facts/**'
 jobs:
   build:
     runs-on: ubuntu-latest
