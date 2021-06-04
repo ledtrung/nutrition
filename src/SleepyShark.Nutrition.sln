@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{7F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SleepyShark.Nutrition.FactApi", "services\facts\SleepyShark.Nutrition.FactApi\SleepyShark.Nutrition.FactApi.csproj", "{8090E753-D9A4-40D6-9A23-CDC67B192063}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "factapi", "factapi", "{75F7BE20-9B06-4FDB-BC92-F04621393E81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,7 +33,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F3075E35-A4E3-453F-909D-6E09FEA90840} = {9184B926-272F-4C93-9F7D-3864D03D87AB}
-		{8090E753-D9A4-40D6-9A23-CDC67B192063} = {7F70A2DB-AEE8-44DE-9574-092CBFAF9169}
+		{8090E753-D9A4-40D6-9A23-CDC67B192063} = {75F7BE20-9B06-4FDB-BC92-F04621393E81}
+		{75F7BE20-9B06-4FDB-BC92-F04621393E81} = {7F70A2DB-AEE8-44DE-9574-092CBFAF9169}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A645E0A-C587-49C4-ACCE-0E33259E4129}
