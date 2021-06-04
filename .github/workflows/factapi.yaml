@@ -16,10 +16,10 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore src/services/facts/SleepyShark.Nutrition.FactApi/SleepyShark.Nutrition.FactApi.csproj
     - name: Publish
-      run: dotnet build --no-restore src/services/facts/SleepyShark.Nutrition.FactApi/SleepyShark.Nutrition.FactApi.csproj -o /artifact
+      run: dotnet build --no-restore src/services/facts/SleepyShark.Nutrition.FactApi/SleepyShark.Nutrition.FactApi.csproj -o artifact
     - uses: actions/upload-artifact@v2
       with:
         name: factapi-artifact
-        path: /artifact
+        path: artifact
     - name: Test
       run: dotnet test --no-build --verbosity normal src/services/facts/SleepyShark.Nutrition.FactApi/SleepyShark.Nutrition.FactApi.csproj
