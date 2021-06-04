@@ -6,9 +6,9 @@ EXPOSE 80
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
-WORKDIR /src
-COPY ["services/facts/SleepyShark.Nutrition.FactApi/SleepyShark.Nutrition.FactApi.csproj", "services/facts/SleepyShark.Nutrition.FactApi/"]
-RUN dotnet restore "services/facts/SleepyShark.Nutrition.FactApi/SleepyShark.Nutrition.FactApi.csproj"
+WORKDIR /
+COPY ["src/services/facts/SleepyShark.Nutrition.FactApi/SleepyShark.Nutrition.FactApi.csproj", "src/services/facts/SleepyShark.Nutrition.FactApi/"]
+RUN dotnet restore "src/services/facts/SleepyShark.Nutrition.FactApi/SleepyShark.Nutrition.FactApi.csproj"
 COPY . .
 WORKDIR "/src/services/facts/SleepyShark.Nutrition.FactApi"
 RUN dotnet build "SleepyShark.Nutrition.FactApi.csproj" -c Release -o /app/build
