@@ -1,7 +1,7 @@
 ﻿name: FactApi Build
 on:
   push:
-    branches: [ user/trung/sample-build-action ]
+    branches: [ master ]
     paths: 
       - 'src/services/facts/**'
 jobs:
